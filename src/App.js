@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import ImageViewer from './components/ImageViewer';
+import DatePicker from './components/DatePicker';
+import RangeSlider from './components/RangeSlider';
+import Stack from 'react-bootstrap/Stack';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>NASA pics</h2>
+      <Stack gap={3}>
+        <DatePicker/>
+        <RangeSlider/>
+      </Stack>
+      <ImageViewer/>
+
     </div>
   );
 }
